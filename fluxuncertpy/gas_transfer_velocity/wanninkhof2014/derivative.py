@@ -1,10 +1,6 @@
 """
-Gas Transfer Velocity
-===========================
-
-Wanninkhof 2014 Derivatives
-----------------------------
-
+Wanninkhof 2014: Derivatives
+-----------------------------
 """
 from numpy import nanmedian as _nanmedian
 from fluxuncertpy.gas_transfer_velocity.wanninkhof2014._utils import schmidt_number as _schmidt_number

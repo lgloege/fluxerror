@@ -1,10 +1,6 @@
 """
-Solubility
-===========================
-
-Weiss 1974 Fractional Uncertainties
-------------------------------------------
-
+Weiss 1974: Fractional Uncertainties
+-----------------------------------
 """
 from fluxuncertpy.solubility.weiss1974.derivative import (
     ko_wrt_temp,

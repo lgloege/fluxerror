@@ -1,10 +1,6 @@
 """
-Solubility
-===========================
-
-Weiss 1974 Derivatives
+Weiss 1974: Derivatives
 ------------------------------------------
-
 """
 from fluxuncertpy.solubility.weiss1974._utils import weiss1974_f2
 

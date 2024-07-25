@@ -1,10 +1,6 @@
 """
-Gas Transfer Velocity
-===========================
-
-Wanninkhof 2014 Fractional Uncertainties
-------------------------------------------
-
+Wanninkhof 2014: Fractional Uncertainties
+-----------------------------------------
 """
 from fluxuncertpy.gas_transfer_velocity.wanninkhof2014._utils import schmidt_number as _schmidt_number
 from fluxuncertpy.gas_transfer_velocity.wanninkhof2014.derivative import schmidt_number_wrt_temp
