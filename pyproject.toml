@@ -3,8 +3,8 @@ requires = ["setuptools>=42", "setuptools-scm>=7"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "fluxuncertpy"
-version = "0.1.0"
+name = "fluxerror"
+version = "0.1.0-dev"
 authors = [
   {name = "Luke Gloege", email = "lukegloege@gmail.com"}
 ]
@@ -29,7 +29,7 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["fluxuncertpy"]
+packages = ["fluxerror"]
 
 [tool.setuptools_scm]
 fallback_version = "9999"
