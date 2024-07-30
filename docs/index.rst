@@ -1,17 +1,18 @@
-.. FluxUncertPy documentation master file, created by
+.. FluxError documentation master file, created by
    sphinx-quickstart on Tue Jul 16 22:57:10 2024.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-FluxUncertPy Documentation
+FluxError Documentation
 ========================================
 
-The goal of `FluxUncertPy` is to make it easy to calculate the uncertainty in air-sea CO2 flux
-and the contribution of each term to total uncertainty. `FluxUncertPy` assumes the bulk
+The goal of `FluxError` is to make it easy to calculate the uncertainty in air-sea CO2 flux
+and the contribution of each term to total uncertainty. `FluxError` assumes the bulk
 formula is used to estimate flux:
 
 .. math::
-   FCO2 = k_w * K_o * \Delta pCO_2
+
+   FCO2 = k_w \cdot K_o \cdot \Delta pCO_2
 
 Where the air-sea flux of CO2 (:math:`FCO2`) is expressed in terms of the piston velocity (:math:`k_w`),
 solubility (:math:`K_o`), and difference in partial pressure between atmosphere and ocean (:math:`\Delta pCO_2`).
@@ -19,6 +20,7 @@ solubility (:math:`K_o`), and difference in partial pressure between atmosphere 
 Applying a propagation of errors, and assuming independence, we can express the flux in terms of fractional uncertainties
 
 .. math::
+
        \bigg(\frac{\delta FCO2}{FCO2}\bigg)^2 = \bigg(\frac{\delta kw}{kw} \bigg)^2 +  \bigg(\frac{\delta K_o}{K_o} \bigg)^2 +  \bigg(\frac{\delta \Delta pCO2}{\Delta pCO2} \bigg)^2
 
 Where all the :math:`\delta` terms are the uncertainties.
@@ -35,11 +37,8 @@ Installation
 
 .. code-block:: bash
 
-   # for latest release
-   pip install fluxuncertpy
-
    # for bleeding-edge up-to-date commit
-   pip install -e git+https://github.com/lgloege/fluxuncertpy.git
+   pip install -e git+https://github.com/lgloege/fluxerror.git
 
 .. toctree::
    :maxdepth: 2
@@ -54,7 +53,7 @@ Installation
 
    contributing
    authors
-   GitHub repo <https://github.com/lgloege/fluxuncertpy>
+   GitHub repo <https://github.com/lgloege/fluxerror>
 
 Indices and tables
 ==================
