@@ -1,9 +1,6 @@
-"""
-Wanninkhof 2014: Derivatives
------------------------------
-"""
 from numpy import nanmedian as _nanmedian
-from fluxuncertpy.gas_transfer_velocity.wanninkhof2014._utils import schmidt_number as _schmidt_number
+
+from fluxerror.gas_transfer_velocity.wanninkhof2014._utils import schmidt_number as _schmidt_number
 
 
 def schmidt_number_wrt_temp(temp_C):
@@ -11,7 +8,8 @@ def schmidt_number_wrt_temp(temp_C):
     with respect to (wrt) temperature
 
     .. math::
-        B + 2*C*T + 3*D*T^2 + 4*E*T^3
+
+        B + 2 \\cdot C \\cdot T + 3 \\cdot D \\cdot T^2 + 4 \\cdot E \\cdot T^3
 
     Args:
         temp_C (array): temperature in degrees C

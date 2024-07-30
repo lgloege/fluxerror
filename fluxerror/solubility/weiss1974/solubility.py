@@ -11,7 +11,8 @@ def weiss1974_f1(temp_C):
     """function 1 of Weiss (1974) parameterization
 
     .. math::
-        f_1(T) = a_1 + a_2 * \\bigg( \\frac{100}{T} \\bigg ) + a_3 * \\log \\bigg ( \\frac{T}{100} \\bigg)
+
+        f_1(T) = a_1 + a_2 \\cdot \\bigg( \\frac{100}{T} \\bigg ) + a_3 \\cdot \\log \\bigg ( \\frac{T}{100} \\bigg)
 
     Constants:
 
@@ -37,7 +38,8 @@ def weiss1974_f2(temp_C):
     """function 2 of Weiss (1974) parameterization
 
     .. math::
-        f_2(T) = b_1 + b_2 * \\bigg ( \\frac{T}{100} \\bigg)  + b_3 * \\bigg ( \\frac{T}{100} \\bigg)^2
+
+        f_2(T) = b_1 + b_2 \\cdot \\bigg ( \\frac{T}{100} \\bigg)  + b_3 \\cdot \\bigg ( \\frac{T}{100} \\bigg)^2
 
     Constants:
 
@@ -63,14 +65,16 @@ def weiss1974(temp_C, S):
     """Weiss (1974) solubility parameterization
 
     .. math::
-        K = f_1(T) + S * f_2(T)
+
+        K = f_1(T) + S \\cdot f_2(T)
 
     where
 
     .. math::
-        f_1(T) = a_1 + a_2 * \\bigg( \\frac{100}{T} \\bigg ) + a_3 * \\log \\bigg ( \\frac{T}{100} \\bigg)
 
-        f_2(T) = b_1 + b_2 * \\bigg ( \\frac{T}{100} \\bigg)  + b_3 * \\bigg ( \\frac{T}{100} \\bigg)^2
+        f_1(T) = a_1 + a_2 \\cdot \\bigg( \\frac{100}{T} \\bigg ) + a_3 \\cdot \\log \\bigg ( \\frac{T}{100} \\bigg)
+
+        f_2(T) = b_1 + b_2 \\cdot \\bigg ( \\frac{T}{100} \\bigg) + b_3 \\cdot \\bigg ( \\frac{T}{100} \\bigg)^2
 
 
     Constants:
@@ -97,7 +101,8 @@ def d_weiss1974_f1_wrt_temp(temp_C):
     """derivative of Weiss (1974) f_1 w.r.t temperature
 
     .. math::
-        \\frac{\\partial f_1}{\\partial T} = \\frac{a_3}{T} - (a_2 * 100 * T^{-2})
+
+        \\frac{\\partial f_1}{\\partial T} = \\frac{a_3}{T} - (a_2 \\cdot 100 \\cdot T^{-2})
 
     Args:
         temp_C (float): temperature in degrees C
@@ -115,7 +120,8 @@ def d_weiss1974_f2_wrt_temp(temp_C):
     """derivative of Weiss (1974) f_2 w.r.t temperature
 
     .. math::
-        \\frac{\\partial f_2}{\\partial T} = \\frac{b_2}{100} + \\bigg( \\frac{2 * b_3 * T}{100^2}\\bigg )
+
+        \\frac{\\partial f_2}{\\partial T} = \\frac{b_2}{100} + \\bigg( \\frac{2 \\cdot b_3 \\cdot T}{100^2}\\bigg )
 
     Args:
         temp_C (float): temperature in degrees C
@@ -136,9 +142,10 @@ def d_weiss1974_wrt_temp(temp_C, S):
     with respect to temperature.
 
     .. math::
-        \\frac{\\partial K}{\\partial T} = \\frac{\\partial f_1(T)}{\\partial T} + S * \\frac{\\partial f_2(T)}{\\partial T}
 
-        = \\frac{a_3}{T} - (a_2 * 100 * T^{-2}) + S * \\bigg [ \\frac{b_2}{100} + \\bigg( \\frac{2 * b_3 * T}{100^2}\\bigg ) \\bigg ]
+        \\frac{\\partial K}{\\partial T} = \\frac{\\partial f_1(T)}{\\partial T} + S \\cdot \\frac{\\partial f_2(T)}{\\partial T}
+
+        = \\frac{a_3}{T} - (a_2 \\cdot 100 * T^{-2}) + S \\cdot \\bigg [ \\frac{b_2}{100} + \\bigg( \\frac{2 \\cdot b_3 \\cdot T}{100^2}\\bigg ) \\bigg ]
 
 
     Args:
@@ -159,7 +166,8 @@ def d_weiss1974_wrt_salinity(temp_C):
     """deriviative of Weiss (1974) with respect to salinity
 
     .. math::
-        \\frac{\\partial K}{\\partial S} = b_1 + b_2 * \\bigg ( \\frac{T}{100} \\bigg)  + b_3 * \\bigg ( \\frac{T}{100} \\bigg)^2
+
+        \\frac{\\partial K}{\\partial S} = b_1 + b_2 \\cdot \\bigg ( \\frac{T}{100} \\bigg)  + b_3 \\cdot \\bigg ( \\frac{T}{100} \\bigg)^2
 
     Constants:
 
@@ -181,7 +189,8 @@ def frac_ko_temp(temp_C, S, delta_T):
     """fractional uncertainty of K from temperature
 
     .. math::
-        \\frac{\\partial K / \\partial T]}{\delta T}
+
+        \\frac{\\partial K / \\partial T]}{\\delta T}
 
     Args:
         temp_C (float): temperature in degrees C
@@ -199,7 +208,8 @@ def frac_ko_salt(temp_C, delta_S):
     """fractional uncertainty of K from salinity
 
     .. math::
-        \\frac{\\partial K / \\partial S}{\delta S}
+
+        \\frac{\\partial K / \\partial S}{\\delta S}
 
     Args:
         temp_C (float): temperature in degrees C

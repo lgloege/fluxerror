@@ -4,7 +4,8 @@ def weiss1974_f1(temp_C):
     """function 1 of Weiss (1974) parameterization
 
     .. math::
-        f_1(T) = a_1 + a_2 * \\bigg( \\frac{100}{T} \\bigg ) + a_3 * \\log \\bigg ( \\frac{T}{100} \\bigg)
+
+        f_1(T) = a_1 + a_2 \\cdot \\bigg( \\frac{100}{T} \\bigg ) + a_3 \\cdot \\log \\bigg ( \\frac{T}{100} \\bigg)
 
     Constants:
 
@@ -30,7 +31,8 @@ def weiss1974_f2(temp_C):
     """function 2 of Weiss (1974) parameterization
 
     .. math::
-        f_2(T) = b_1 + b_2 * \\bigg ( \\frac{T}{100} \\bigg)  + b_3 * \\bigg ( \\frac{T}{100} \\bigg)^2
+
+        f_2(T) = b_1 + b_2 \\cdot \\bigg ( \\frac{T}{100} \\bigg)  + b_3 \\cdot \\bigg ( \\frac{T}{100} \\bigg)^2
 
     Constants:
 
@@ -61,9 +63,10 @@ def weiss1974(temp_C, S):
     where
 
     .. math::
-        f_1(T) = a_1 + a_2 * \\bigg( \\frac{100}{T} \\bigg ) + a_3 * \\log \\bigg ( \\frac{T}{100} \\bigg)
 
-        f_2(T) = b_1 + b_2 * \\bigg ( \\frac{T}{100} \\bigg)  + b_3 * \\bigg ( \\frac{T}{100} \\bigg)^2
+        f_1(T) = a_1 + a_2 \\cdot \\bigg( \\frac{100}{T} \\bigg ) + a_3 \\cdot \\log \\bigg ( \\frac{T}{100} \\bigg)
+
+        f_2(T) = b_1 + b_2 \\cdot \\bigg ( \\frac{T}{100} \\bigg)  + b_3 \\cdot \\bigg ( \\frac{T}{100} \\bigg)^2
 
 
     Constants:

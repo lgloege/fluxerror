@@ -1,10 +1,3 @@
-"""
-Gas Transfer Velocity
---------------------
-
-
-"""
-
 from numpy import nanmedian
 
 def schmidt_number(temp_C):
@@ -12,7 +5,8 @@ def schmidt_number(temp_C):
     in Wanninkhof (2014) Table 1.
 
     .. math::
-        Sc = a + b * T + c * T^2 + d * T^3 + e * T^4
+
+        Sc = a + b \\cdot T + c \\cdot T^2 + d \\cdot T^3 + e \\cdot T^4
 
     constants:
 
