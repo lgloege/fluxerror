@@ -45,6 +45,7 @@ Installation
    :caption: Contents:
 
    usage
+   methodology
    api
 
 .. toctree::
