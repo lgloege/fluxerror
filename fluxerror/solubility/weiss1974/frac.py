@@ -1,41 +1,53 @@
-from fluxerror.solubility.weiss1974.derivative import (
-    ko_wrt_temp,
-    ko_wrt_salt
-)
+"""Fractional uncertainty equations for Weiss (1974)."""
+
+from fluxerror.solubility.weiss1974 import derivative
+
 
 def ko_wrt_temp(temp_C, S, delta_T):
-    """fractional uncertainty of K from temperature
+    r"""Fractional uncertainty of K from temperature.
 
     .. math::
 
-        \\frac{\\partial K / \\partial T]}{\\delta T}
+        \frac{\partial K / \partial T]}{\delta T}
 
-    Args:
-        temp_C (float): temperature in degrees C
-        S (float): salinity in PSU
-        delta_T (float): uncertainty in temperature in degrees C
+    Parameters
+    ----------
+    temp_C : float
+        temperature in degrees C
+    S : float
+        salinity in PSU
+    delta_T : float
+        uncertainty in temperature in degrees C
 
-    Returns:
-        frac: fractional uncertainty in K from temperature
-    """
+    Returns
+    -------
+    frac :
+        fractional uncertainty in K from temperature
+    """  # noqa: E501
     T = temp_C + 273.15
-    d_ko_dT = ko_wrt_temp(T, S)
-    return (d_ko_dT * delta_T)
+    d_ko_dT = derivative.ko_wrt_temp(T, S)
+    return d_ko_dT * delta_T
 
 
 def ko_wrt_salt(temp_C, delta_S):
-    """fractional uncertainty of K from salinity
+    r"""Fractional uncertainty of K from salinity.
 
     .. math::
-        \\frac{\\partial K / \\partial S}{\\delta S}
 
-    Args:
-        temp_C (float): temperature in degrees C
-        delta_S (float): uncertainty in salinity
+        \frac{\partial K / \partial S}{\delta S}
 
-    Returns:
-        frac: fractional uncertainty in K from salinity
-    """
+    Parameters
+    ----------
+    temp_C : float
+        temperature in degrees C
+    delta_S : float
+        uncertainty in salinity
+
+    Returns
+    -------
+    frac :
+        fractional uncertainty in K from salinity
+    """  # noqa: E501
     T = temp_C + 273.15
-    d_ko_ds = ko_wrt_salt(T)
+    d_ko_ds = derivative.ko_wrt_salt(T)
     return d_ko_ds * delta_S

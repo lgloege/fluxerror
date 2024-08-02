@@ -1,6 +1,6 @@
-# Import and expose the submodules from wanninkhof2014
+"""Set up submodule access for the wanninkhof 2014."""
 
 from . import derivative
 from . import frac
 
-__all__ = ['derivative', 'frac']
+__all__ = ["derivative", "frac"]
