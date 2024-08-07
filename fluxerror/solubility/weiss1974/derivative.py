@@ -3,7 +3,7 @@
 from fluxerror.solubility.weiss1974._utils import weiss1974_f2
 
 
-def _weiss1974_f1_wrt_temp(temp_C):
+def _weiss1974_f1_wrt_temp(temp_C, *args, **kwargs):
     r"""Calculate derivative of Weiss (1974) f_1 w.r.t temperature.
 
     .. math::
@@ -51,7 +51,7 @@ def _weiss1974_f2_wrt_temp(temp_C):
     return (b2 / 100) + ((2 * b3 * T) / (100**2))
 
 
-def ko_wrt_temp(temp_C, S):
+def ko_wrt_temp(temp_C, S, *args, **kwargs):
     r"""Calculate derivative of Weiss (1974) parameterization w.r.t. temperature.
 
     .. math::
@@ -85,7 +85,7 @@ def ko_wrt_temp(temp_C, S):
     return df1_dt + (S * df2_dt)
 
 
-def ko_wrt_salt(temp_C):
+def ko_wrt_salt(temp_C, *args, **kwargs):
     r"""Deriviative of Weiss (1974) with respect to salinity.
 
     .. math::

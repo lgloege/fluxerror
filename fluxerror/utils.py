@@ -1,7 +1,7 @@
 """Utility functions for fluxerror."""
 
 
-def fractional_uncertainty(value, delta):
+def fractional_uncertainty(value, delta, *args, **kwargs):
     r"""Fractional uncertainty calculation.
 
     .. math::
@@ -23,7 +23,7 @@ def fractional_uncertainty(value, delta):
     return delta / value
 
 
-def fractional_uncertainty_squared(delta, value):
+def fractional_uncertainty_squared(delta, value, *args, **kwargs):
     r"""Fractional uncertainty squared calculation.
 
     .. math::
@@ -46,7 +46,7 @@ def fractional_uncertainty_squared(delta, value):
     return fractional_uncertainty(delta, value) * fractional_uncertainty(delta, value)
 
 
-def frac_pco2ocn(pco2, delta_pco2):
+def frac_pco2ocn(pco2, delta_pco2, *args, **kwargs):
     """Fractional uncertainty in ocean pCO2.
 
     Parameters

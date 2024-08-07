@@ -7,7 +7,7 @@ from fluxerror.gas_transfer_velocity.wanninkhof2014._utils import (
 )
 
 
-def schmidt_number_wrt_temp(temp_C):
+def schmidt_number_wrt_temp(temp_C, *args, **kwargs):
     r"""Calculate derivative of the Schmidt number wrt temperature.
 
     .. math::
@@ -34,7 +34,7 @@ def schmidt_number_wrt_temp(temp_C):
     return B + 2 * C * temp_C + 3 * D * (temp_C**2) + 4 * E * (temp_C**3)
 
 
-def kw_wrt_umean(temp_C, u_mean, a=0.251):
+def kw_wrt_umean(temp_C, u_mean, a=0.251, *args, **kwargs):
     r"""Calculate deriviative of kw wrt to mean wind speed.
 
     .. math::

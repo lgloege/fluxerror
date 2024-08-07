@@ -8,7 +8,7 @@ from fluxerror.gas_transfer_velocity.wanninkhof2014.derivative import (
 )
 
 
-def kw_umean(u_mean: float, u_std: float, delta_umean: float) -> float:
+def kw_umean(u_mean: float, u_std: float, delta_umean: float, *args, **kwargs) -> float:
     """Fractional uncertainy kw wrt to mean wind speed.
 
     Parameters
@@ -30,7 +30,7 @@ def kw_umean(u_mean: float, u_std: float, delta_umean: float) -> float:
     return numerator / denominator
 
 
-def kw_ustd(u_mean: float, u_std: float, delta_ustd: float) -> float:
+def kw_ustd(u_mean: float, u_std: float, delta_ustd: float, *args, **kwargs) -> float:
     """Fraction uncertainty in kw wrt to std of wind speed.
 
     Parameters
@@ -52,7 +52,7 @@ def kw_ustd(u_mean: float, u_std: float, delta_ustd: float) -> float:
     return numerator / denominator
 
 
-def kw_sc(temp_C: float, delta_T: float) -> float:
+def kw_sc(temp_C: float, delta_T: float, *args, **kwargs) -> float:
     """Fractional uncertainty in kw wrt to schmidt number.
 
     Parameters

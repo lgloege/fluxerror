@@ -3,7 +3,7 @@
 from fluxerror.solubility.weiss1974 import derivative
 
 
-def ko_wrt_temp(temp_C, S, delta_T):
+def ko_wrt_temp(temp_C, S, delta_T, *args, **kwargs):
     r"""Fractional uncertainty of K from temperature.
 
     .. math::
@@ -29,7 +29,7 @@ def ko_wrt_temp(temp_C, S, delta_T):
     return d_ko_dT * delta_T
 
 
-def ko_wrt_salt(temp_C, delta_S):
+def ko_wrt_salt(temp_C, delta_S, *args, **kwargs):
     r"""Fractional uncertainty of K from salinity.
 
     .. math::

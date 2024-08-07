@@ -3,7 +3,7 @@
 from math import log
 
 
-def weiss1974_f1(temp_C):
+def weiss1974_f1(temp_C, *args, **kwargs):
     r"""Calculate function 1 of Weiss (1974) parameterization.
 
     .. math::
@@ -35,7 +35,7 @@ def weiss1974_f1(temp_C):
     return a1 + a2 * (100 / T) + a3 * log(T100)
 
 
-def weiss1974_f2(temp_C):
+def weiss1974_f2(temp_C, *args, **kwargs):
     r"""Calculate function 2 of Weiss (1974) parameterization.
 
     .. math::
@@ -67,7 +67,7 @@ def weiss1974_f2(temp_C):
     return b1 + b2 * T100 + b3 * T100**2
 
 
-def weiss1974(temp_C, S):
+def weiss1974(temp_C, S, *args, **kwargs):
     r"""Weiss (1974) solubility parameterization.
 
     .. math::

@@ -3,7 +3,7 @@
 from numpy import nanmedian as _nanmedian
 
 
-def schmidt_number(temp_C):
+def schmidt_number(temp_C, *args, **kwargs):
     r"""Calculate the Schmidt number.
 
     Calculates the Schmidt number as defined by Jahne et al. (1987) and listed

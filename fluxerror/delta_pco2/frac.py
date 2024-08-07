@@ -1,7 +1,7 @@
 """Fractional uncertainty for delta pCO2."""
 
 
-def pco2ocn(pco2, delta_pco2):
+def pco2ocn(pco2, delta_pco2, *args, **kwargs):
     r"""Fractional uncertainty in pCO2.
 
     .. math::
