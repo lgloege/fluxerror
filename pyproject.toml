@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "fluxerror"
-version = "0.1.0-dev"
+version = "0.1.1-dev"
 authors = [
   {name = "Luke Gloege", email = "lukegloege@gmail.com"}
 ]
@@ -33,4 +33,3 @@ packages = ["fluxerror"]
 
 [tool.setuptools_scm]
 fallback_version = "9999"
-
