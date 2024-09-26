@@ -30,7 +30,12 @@
 ---
 
 # Installation
-This project is currently a work in progress and can only be installed from the repository while we are testing all the modules
+It is recommened to install from PyPi
+```
+pip install fluxerror
+```
+
+For bleeding edge updates, install from git
 ```
 pip install git+https://github.com/lgloege/fluxerror.git
 ```
