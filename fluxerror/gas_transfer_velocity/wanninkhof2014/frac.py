@@ -8,6 +8,24 @@ from fluxerror.gas_transfer_velocity.wanninkhof2014.derivative import (
 )
 
 
+def kw_a(a: float, delta_a: float, *args, **kwargs) -> float:
+    """Fractional uncertainy kw wrt to scale factor.
+
+    Parameters
+    ----------
+    a : float
+        scale factor
+    delta_a : float
+        uncertainty in scale factor
+
+    Returns
+    -------
+    float :
+        fractional uncertainty in kw wrt to scale factor
+    """  # noqa: E501
+    return delta_a / a
+
+
 def kw_umean(u_mean: float, u_std: float, delta_umean: float, *args, **kwargs) -> float:
     """Fractional uncertainy kw wrt to mean wind speed.
 
